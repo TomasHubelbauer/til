@@ -1,5 +1,15 @@
 # TIL
 
+## 2020-10-28 MarkDown escape fenced code block
+
+Use `~~~` to escape a fenced code block, like so:
+
+```markdown
+~~~
+I can use backticks all I want in here!
+~~~
+```
+
 ## 2020-10-28 NodeJS `package.json` `license` values
 
 https://github.com/jslicense/spdx-license-ids
