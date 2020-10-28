@@ -12,7 +12,7 @@ I can use backticks all I want in here!
 
 ## 2020-10-28 NodeJS `package.json` `license` values
 
-https://github.com/jslicense/spdx-license-ids
+https://github.com/jslicense/spdx-license-ids/blob/master/index.json
 
 ## 2020-10-28 Install NPM binary globally before each test run
 
