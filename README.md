@@ -1,5 +1,9 @@
 # TIL
 
+## 2020-10-28 NodeJS `package.json` `license` values
+
+https://github.com/jslicense/spdx-license-ids
+
 ## 2020-10-28 Install NPM binary globally before each test run
 
 I am working on an NPM binary module and I would like to run the module by name
