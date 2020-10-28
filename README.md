@@ -23,14 +23,15 @@ script path.
     "name": "index.js"
   },
   "scripts": {
-    "pretest": "npm link --force",
+    "pretest": "npm unlink && npm link",
     "test": "cd test && name"
   }
 }
 ```
 
 The `prelink` step uses `npm link` to make the current module installed in the
-global scope and it uses `--force` to replace any existing installation.
+global scope. It may be faster to use `--force` to replace the existing one,
+but it prints an ugly warning.
 
 The `test` step then just `cd`s to the `test` folder and runs the command using
 its binary name. Thanks to the `pretest` we know that's the latest version of
@@ -43,10 +44,6 @@ get eaten up as a part of `.*`? Just use `.*?` and then `.*?` will only match
 stuff up until `end` but will not eat `end`.
 
 ## To-Do
-
-### Find a better way than `npm link --force` - unlink first?
-
-2020-10-28
 
 ### Set up a TIL scanner and digest maker
 
