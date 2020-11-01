@@ -1,5 +1,15 @@
 # TIL
 
+## 2020-11-01 Using Git patch instead of find and replace
+
+I needed to replace a part of a source file in CI and wanted to do it on Windows,
+but not the ugly way PowerShell does it. This was for GitHub Actions, so PS is
+the default runner for `run` steps.
+
+I figured I could just use `git diff index.js > index.patch` and then run
+`git apply index.patch` in CI to get my replacing done without using PowerShell
+and downloading any non-built-in software to the agent.
+
 ## 2020-10-28 MarkDown escape fenced code block
 
 Use `~~~` to escape a fenced code block, like so:
