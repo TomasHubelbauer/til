@@ -1,5 +1,24 @@
 # TIL
 
+## 2020-11-07 `Remove-Item -Exclude` versus `Get-ChildItem -Exclude | Remove-Item`
+
+```powershell
+Remove-Item . -Exclude file,directory,directory/* -Recurse
+```
+
+This command will preserve `directory`, but it will also wipe its contents!
+Even the wildcard won't stop that.
+
+Use this instead:
+
+```powershell
+Get-ChildItem -Exclude file,directory | Remove-Item -Recurse
+```
+
+`Remove-Item` supposedly worked as expected until PowerShell 3.0, but does no longer.
+
+Source: https://stackoverflow.com/a/52143053/2715716
+
 ## 2020-11-01 Using Git patch instead of find and replace
 
 I needed to replace a part of a source file in CI and wanted to do it on Windows,
